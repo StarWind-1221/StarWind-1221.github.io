@@ -46,10 +46,12 @@
 }
 
 .toc .active {
-    font-size: 110%;
+    font-size: 105%;
     font-weight: 600;
-    color: #614a85;
-    text-decoration: underline;
+    color: var(--kami-brand, #1B365D);
+    text-decoration: none;
+    border-left: 2px solid var(--kami-brand, #1B365D);
+    padding-left: 6px;
 }
 
 .toc ul {
@@ -85,5 +87,5 @@
 }
 
 .toc li a:hover {
-    color: var(--secondary);
+    color: var(--kami-brand-lt, #2D5A8A);
 }

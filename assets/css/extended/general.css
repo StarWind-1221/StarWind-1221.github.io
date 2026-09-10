@@ -12,8 +12,106 @@
 body {
   font-family: "SFProText-Regular", "LXGWWenKaiGBScreen";
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.68;
+  letter-spacing: 0.3px;
   word-break: break-word;
   background: var(--theme);
+  color: var(--content);
   font-display: swap;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
+/* ============================================================
+   Kami 配色系统与排版规则 (保持原自定义字体不变)
+   ============================================================ */
+:root {
+  /* Kami 核心调色板 (Warm Parchment & Ink Blue) */
+  --kami-parchment: #f5f4ed;     /* 暖羊皮纸底色 */
+  --kami-ivory:     #faf9f5;     /* 浅象牙色容器 */
+  --kami-brand:     #1B365D;     /* Ink Blue 墨蓝 - 标志性重点色 */
+  --kami-brand-lt:  #2D5A8A;     /* 墨蓝高亮 / Hover */
+  --kami-brand-tint:#EEF2F7;     /* 极淡墨蓝背景点缀 */
+  --kami-near-black:#141413;     /* 暖墨黑主字色 */
+  --kami-dark-warm: #3d3d3a;     /* 暖深灰次级字色 */
+  --kami-olive:     #504e49;     /* 暖橄榄灰说明文字 */
+  --kami-stone:     #6b6a64;     /* 灰石色元信息 */
+  --kami-border:    #e8e6dc;     /* 暖沙色边框分割线 */
+  --kami-code-bg:   #f0eee6;     /* 行内代码暖灰底色 */
+
+  /* 映射覆盖 PaperMod 根变量 (日间/暖纸模式) */
+  --theme: var(--kami-parchment);
+  --entry: var(--kami-ivory);
+  --primary: var(--kami-near-black);
+  --secondary: var(--kami-olive);
+  --tertiary: var(--kami-stone);
+  --content: var(--kami-near-black);
+  --border: var(--kami-border);
+  --code-bg: var(--kami-code-bg);
+  --code-block-bg: var(--kami-ivory);
+}
+
+/* Kami 暗色模式 (Warm Deep Charcoal，无冷灰蓝) */
+.dark {
+  --theme: #141413;
+  --entry: #1e1e1d;
+  --primary: #edece6;
+  --secondary: #a8a69e;
+  --tertiary: #6e6d67;
+  --content: #dedcd5;
+  --border: #2e2e2b;
+  --code-bg: #262624;
+  --code-block-bg: #1c1c1a;
+}
+
+/* 全局与文章链接 */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.post-content a {
+  color: var(--kami-brand);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(27, 54, 93, 0.25);
+  transition: all 0.15s ease;
+}
+
+.post-content a:hover {
+  color: var(--kami-brand-lt);
+  border-bottom-color: var(--kami-brand-lt);
+}
+
+.dark .post-content a {
+  color: #7ba7d9;
+  border-bottom-color: rgba(123, 167, 217, 0.35);
+}
+
+.dark .post-content a:hover {
+  color: #9ec2ec;
+  border-bottom-color: #9ec2ec;
+}
+
+/* 标题层次与字重 */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* 引用块样式 (纯粹内敛，不使用花哨装饰) */
+.post-content blockquote {
+  margin: 1.5em 0;
+  padding: 0.5em 0 0.5em 1.2em;
+  border-left: 3px solid var(--border);
+  color: var(--secondary);
+  background: transparent;
+  font-style: normal;
+}
+
+/* 行内代码轻量质感 */
+.post-content code {
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
