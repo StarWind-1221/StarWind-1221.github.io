@@ -114,4 +114,47 @@ h1, h2, h3, h4, h5, h6 {
 .post-content code {
   border: 1px solid var(--border);
   border-radius: 4px;
-}
+}
+
+/* ============================================================
+   Kami 风格 LaTeX 数学公式排版 (Math Typography)
+   ============================================================ */
+/* 确保公式文字颜色与 Kami 暖墨黑体系严格同步 */
+.katex {
+  color: var(--primary);
+  font-size: 1.05em;
+}
+
+/* 块级公式：采用 Kami 推荐的独立卡片 / 内敛呼吸留白 */
+.katex-display {
+  margin: 1.5em 0 !important;
+  padding: 0.9em 1.2em;
+  background: var(--entry);          /* 浅象牙色背景 */
+  border: 1px solid var(--border);   /* 暖沙色极细边框 */
+  border-radius: var(--radius);
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 行内公式：保持自然文本流，微调纵向对齐 */
+.post-content p .katex {
+  padding: 0 0.15em;
+}
+
+/* 序号与标签样式（如公式编号）弱化为 Kami 的 stone 灰石色 */
+.katex-display .tag,
+.katex-display .eqn-num {
+  color: var(--tertiary);
+  font-size: 0.9em;
+}
+
+/* 滚动条质感适配 Kami 暖色调 */
+.katex-display::-webkit-scrollbar {
+  height: 4px;
+}
+.katex-display::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
