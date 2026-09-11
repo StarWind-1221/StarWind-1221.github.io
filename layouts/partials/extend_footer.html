@@ -15,8 +15,4 @@
   })("{{ $highlight.RelPermalink }}", function () {
     pangu.spacingPage();
   });
-</script>
-
-{{ if or (.Page.Store.Get "hasMermaid") .Params.mermaid .Site.Params.mermaid }}
-{{ partial "mermaid.html" . }}
-{{ end }}
+</script>
