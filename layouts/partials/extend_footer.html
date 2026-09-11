@@ -1,4 +1,4 @@
-{{- $highlight := resources.Get "js/pangu.min.js" }}$
+{{- $highlight := resources.Get "js/pangu.min.js" }}
 <script>
   (function (u, c) {
     var d = document,
@@ -17,6 +17,6 @@
   });
 </script>
 
-{{ if or .Params.mermaid .Site.Params.mermaid }}
+{{ if or (.Page.Store.Get "hasMermaid") .Params.mermaid .Site.Params.mermaid }}
 {{ partial "mermaid.html" . }}
 {{ end }}
