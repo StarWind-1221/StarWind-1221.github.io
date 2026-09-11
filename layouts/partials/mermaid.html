@@ -1,0 +1,43 @@
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+
+  const isDark = document.body.classList.contains('dark');
+  
+  mermaid.initialize({
+    startOnLoad: true,
+    theme: 'base',
+    fontFamily: '"SFProText-Regular", "LXGWWenKaiGBScreen", system-ui, sans-serif',
+    themeVariables: {
+      darkMode: isDark,
+      background: isDark ? '#141413' : '#f5f4ed',
+      primaryColor: isDark ? '#1e1e1d' : '#faf9f5',
+      primaryTextColor: isDark ? '#edece6' : '#141413',
+      primaryBorderColor: isDark ? '#2e2e2b' : '#e8e6dc',
+      lineColor: isDark ? '#a8a69e' : '#504e49',
+      secondaryColor: isDark ? '#262624' : '#f0eee6',
+      tertiaryColor: isDark ? '#1c1c1a' : '#faf9f5',
+      edgeLabelBackground: isDark ? '#1e1e1d' : '#faf9f5',
+      actorBorder: isDark ? '#2e2e2b' : '#e8e6dc',
+      actorBkg: isDark ? '#1e1e1d' : '#faf9f5',
+      actorTextColor: isDark ? '#edece6' : '#141413',
+      actorLineColor: isDark ? '#a8a69e' : '#504e49',
+      signalColor: isDark ? '#a8a69e' : '#504e49',
+      signalTextColor: isDark ? '#edece6' : '#141413',
+      labelBoxBkgColor: isDark ? '#1e1e1d' : '#faf9f5',
+      labelBoxBorderColor: isDark ? '#2e2e2b' : '#e8e6dc',
+      labelTextColor: isDark ? '#edece6' : '#141413',
+      loopTextColor: isDark ? '#edece6' : '#141413',
+      noteBorderColor: isDark ? '#2e2e2b' : '#e8e6dc',
+      noteBkgColor: isDark ? '#262624' : '#f0eee6',
+      noteTextColor: isDark ? '#edece6' : '#141413',
+      git0: '#1B365D',
+      git1: '#2D5A8A',
+      git2: '#504e49',
+      git3: '#6b6a64',
+      mainBkg: isDark ? '#1e1e1d' : '#faf9f5',
+      nodeBorder: isDark ? '#2e2e2b' : '#e8e6dc',
+      nodeTextColor: isDark ? '#edece6' : '#141413',
+      titleColor: isDark ? '#edece6' : '#141413'
+    }
+  });
+</script>

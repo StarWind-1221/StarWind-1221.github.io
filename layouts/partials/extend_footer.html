@@ -16,3 +16,7 @@
     pangu.spacingPage();
   });
 </script>
+
+{{ if or .Params.mermaid .Site.Params.mermaid }}
+{{ partial "mermaid.html" . }}
+{{ end }}

@@ -157,4 +157,37 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--border);
   border-radius: 2px;
 }
+
+/* ============================================================
+   Kami 风格 Mermaid 图表容器与排版
+   ============================================================ */
+.mermaid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2em 0 !important;
+  padding: 1.5em 1.2em;
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow-x: auto;
+  overflow-y: hidden;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.mermaid svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 滚动条质感适配 */
+.mermaid::-webkit-scrollbar {
+  height: 4px;
+}
+.mermaid::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
 
