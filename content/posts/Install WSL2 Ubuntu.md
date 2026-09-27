@@ -1,7 +1,7 @@
 ---
 title: Install WSL2 Ubuntu 
 date: 2025-09-29
-categories: 环境搭建
+categories: Linux 折腾记录
 ---
 
 <!--more-->

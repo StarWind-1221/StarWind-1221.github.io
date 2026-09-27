@@ -1,7 +1,7 @@
 ---
 title: WSL 镜像模式使用主机代理 
 date: 2025-09-30
-categories: 环境搭建
+categories: Linux 折腾记录
 ---
 
 <!--more-->

@@ -1,7 +1,7 @@
 ---
 title: WSL2 编译安装内核以支持驱动程序编译
 date: 2025-10-16
-categories: WSL2
+categories: Linux 折腾记录
 ---
 
 <!--more-->
