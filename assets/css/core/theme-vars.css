@@ -6,27 +6,43 @@
     --header-height: 60px;
     --footer-height: 60px;
     --radius: 8px;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --content: rgb(31, 31, 31);
-    --code-block-bg: rgb(247, 247, 247);
-    --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
+
+    /* Kami 核心调色板 (Warm Parchment & Ink Blue) */
+    --kami-parchment: #f5f4ed;      /* 暖羊皮纸底色 */
+    --kami-ivory: #faf9f5;          /* 浅象牙色容器 */
+    --kami-brand: #1B365D;          /* Ink Blue 墨蓝 - 标志性重点色 */
+    --kami-brand-lt: #2D5A8A;       /* 墨蓝高亮 / Hover */
+    --kami-brand-tint: #EEF2F7;     /* 极淡墨蓝背景点缀 */
+    --kami-near-black: #141413;     /* 暖墨黑主字色 */
+    --kami-dark-warm: #3d3d3a;      /* 暖深灰次级字色 */
+    --kami-olive: #504e49;          /* 暖橄榄灰说明文字 */
+    --kami-stone: #6b6a64;          /* 灰石色元信息 */
+    --kami-border: #e8e6dc;         /* 暖沙色边框分割线 */
+    --kami-code-bg: #f0eee6;        /* 行内代码暖灰底色 */
+
+    /* 映射覆盖 PaperMod 根变量 (日间/暖纸模式) */
+    --theme: var(--kami-parchment);
+    --entry: var(--kami-ivory);
+    --primary: var(--kami-near-black);
+    --secondary: var(--kami-olive);
+    --tertiary: var(--kami-stone);
+    --content: var(--kami-near-black);
+    --border: var(--kami-border);
+    --code-bg: var(--kami-code-bg);
+    --code-block-bg: var(--kami-ivory);
 }
 
+/* Kami 暗色模式 (Warm Deep Charcoal，无冷灰蓝) */
 .dark {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
-    --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
-    --content: rgb(196, 196, 197);
-    --code-block-bg: rgb(46, 46, 51);
-    --code-bg: rgb(55, 56, 62);
-    --border: rgb(51, 51, 51);
+    --theme: #141413;
+    --entry: #1e1e1d;
+    --primary: #edece6;
+    --secondary: #a8a69e;
+    --tertiary: #6e6d67;
+    --content: #dedcd5;
+    --border: #2e2e2b;
+    --code-bg: #262624;
+    --code-block-bg: #1c1c1a;
 }
 
 .list {
